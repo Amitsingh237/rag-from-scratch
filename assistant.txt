@@ -1,0 +1,43 @@
+ChatCompletion(
+    id='chatcmpl-919',
+    choices=[
+        Choice(
+            finish_reason='tool_calls',
+            index=0,
+            message=ChatCompletionMessage(
+                content='',
+                refusal=None,
+                role='assistant',
+                annotations=[],
+                audio=None,
+                function_call=None,
+                tool_calls=[
+                    ChatCompletionMessageFunctionToolCall(
+                        id='call_crd080g',
+                        type='function',
+                        index=0,
+                        function=Function(
+                            arguments='{}',
+                            name='get_current_time'
+                        )
+                    )
+                ],
+                reasoning="Okay, the user is asking for the current time. "
+                          "Let me check the tools provided. "
+                          "There's a function called get_current_time "
+                          "that returns the current date and time as a "
+                          "formatted string. The parameters are empty, "
+                          "so I don't need any arguments. "
+                          "I should call this function."
+            )
+        )
+    ],
+    created=1793381465,
+    model='qwen3:4b',
+    object='chat.completion',
+    usage=CompletionUsage(
+        completion_tokens=124,
+        prompt_tokens=200,
+        total_tokens=324
+    )
+)
